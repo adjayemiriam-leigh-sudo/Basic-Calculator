@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My Calculator</title>
+  <!-- Tailwind CSS -->
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+</head>
+<body class="bg-gray-200 dark:bg-gray-800 min-h-screen flex items-center justify-center p-4">
+
+  <!-- calculator box -->
+  <div class="bg-white w-72 p-4 rounded-lg shadow-md border border-gray-400">
+    <h1 class="text-center text-xl font-bold mb-3 text-gray-800">Calculator</h1>
+
+    <!-- screen -->
+    <input id="screen" type="text" value="0" readonly
+      class="w-full border border-gray-500 rounded p-2 mb-3 text-right text-2xl bg-gray-100 text-black">
+
+    <!-- buttons  for the calculator -->
+    <div class="grid grid-cols-4 gap-2">
+      <button onclick="clearScreen()" class="col-span-2 bg-red-400 hover:bg-red-500 text-white p-3 rounded">C</button>
+      <button onclick="deleteLast()" class="bg-gray-400 hover:bg-gray-500 text-white p-3 rounded">DEL</button>
+      <button onclick="addToScreen('/')" class="bg-orange-400 hover:bg-orange-500 text-white p-3 rounded">/</button>
+
+      <button onclick="addToScreen('7')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">7</button>
+      <button onclick="addToScreen('8')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">8</button>
+      <button onclick="addToScreen('9')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">9</button>
+      <button onclick="addToScreen('*')" class="bg-orange-400 hover:bg-orange-500 text-white p-3 rounded">x</button>
+
+      <button onclick="addToScreen('4')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">4</button>
+      <button onclick="addToScreen('5')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">5</button>
+      <button onclick="addToScreen('6')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">6</button>
+      <button onclick="addToScreen('-')" class="bg-orange-400 hover:bg-orange-500 text-white p-3 rounded">-</button>
+
+      <button onclick="addToScreen('1')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">1</button>
+      <button onclick="addToScreen('2')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">2</button>
+      <button onclick="addToScreen('3')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">3</button>
+      <button onclick="addToScreen('+')" class="bg-orange-400 hover:bg-orange-500 text-white p-3 rounded">+</button>
+
+      <button onclick="addToScreen('0')" class="col-span-2 bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">0</button>
+      <button onclick="addToScreen('.')" class="bg-gray-300 hover:bg-gray-400 text-black p-3 rounded">.</button>
+      <button onclick="calculate()" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
